@@ -1,37 +1,37 @@
-// Countdown
-const weddingDate = new Date(2026, 5, 15, 15, 0, 0); // June 15, 2026 15:00
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
 
-function updateCountdown() {
-  const countdownEl = document.getElementById('countdown');
-  if (!countdownEl) return;
-
-  const now = new Date();
-  const diff = weddingDate - now;
-
-  if (diff <= 0) {
-    countdownEl.innerHTML = "We're married! 🎉";
-    clearInterval(timer);
-    return;
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
   }
 
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
+  // Countdown code (optional)
+  const weddingDate = new Date(2026, 5, 15, 15, 0, 0);
+  function updateCountdown() {
+    const countdownEl = document.getElementById('countdown');
+    if (!countdownEl) return;
 
-  countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-}
+    const now = new Date();
+    const diff = weddingDate - now;
 
-updateCountdown();
-const timer = setInterval(updateCountdown, 1000);
+    if (diff <= 0) {
+      countdownEl.innerHTML = "We're married! 🎉";
+      clearInterval(timer);
+      return;
+    }
 
-// Hamburger toggle
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
 
-if (hamburger && navLinks) {
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');
-  });
-}
+    countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  updateCountdown();
+  const timer = setInterval(updateCountdown, 1000);
+});
