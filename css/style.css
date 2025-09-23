@@ -2,8 +2,8 @@
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:#222}
 .hero{height:100vh;background-size:cover;background-position:center;display:flex;align-items:center}
-.overlay{color:black;padding:3rem;width:100%;text-align:center;position: absolute;}
-.countdown{margin-top:1rem;font-weight:700;font-size:2rem}
+.overlay{color:#444;padding:3rem;width:100%;text-align:center;position: absolute;}
+.countdown{margin-top:1rem;font-weight:500;font-size:2rem}
 .container{max-width:1000px;margin:2rem auto;padding:0 1rem}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
 .grid img{width:100%;height:200px;object-fit:cover;border-radius:8px}
@@ -25,6 +25,16 @@ body {
   color: #0a3c1f;       /* wedding accent color */
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* optional elegant shadow */
 }
+.event-info {
+  font-family: 'Cinzel Decorative', serif; /* or a clean sans-serif if you prefer */
+  font-size: 3rem;      /* make it bigger */
+  font-weight: 500;       /* medium bold */
+  color: #444;            /* elegant dark gray */
+  margin-top: 1rem;       /* spacing below names */
+  text-align: center;     /* keep it centered */
+  letter-spacing: 1px;    /* spaced-out letters for elegance */
+}
+
 
 /* Navbar */
 .navbar {
@@ -102,4 +112,114 @@ body {
   .nav-links.active {
     display: flex;
   }
+}
+
+main {
+  text-align: left;
+  padding: 2rem;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center; /* centers the form */
+}
+
+.form-container iframe {
+  width: 100%;       /* make it shrink on smaller screens */
+  max-width: 900px;  /* limit maximum width */
+  height: 1100px;    /* keep your desired height */
+  border: none;
+}
+
+/* Rescaling */
+/* For tablets and smaller */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 6rem;
+  }
+
+  .event-info {
+    font-size: 1.2rem;
+  }
+}
+
+/* For very small phones */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .event-info {
+    font-size: 1rem;
+  }
+}
+img, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Event page */
+.event-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.event-page h2 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #b85c5c;
+}
+
+.intro {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.info-card h3 {
+  color: #7a3d3d;
+  margin-bottom: 0.5rem;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+.timeline li {
+  margin: 0.5rem 0;
+}
+.timeline span {
+  font-weight: bold;
+  color: #b85c5c;
+  margin-right: 0.5rem;
+}
+
+/* Video */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

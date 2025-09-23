@@ -2,9 +2,10 @@
 <!-- Same navbar -->
    <link href="css/style.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
 <nav class="navbar">
   <div class="nav-container">
-    <a href="#top" class="logo">Felipe & Konstantina</a>
+    <a href="index.html" class="logo">Felipe & Konstantina</a>
     <div class="hamburger" id="hamburger">
       <span></span>
       <span></span>
@@ -12,18 +13,59 @@
     </div>
     <ul class="nav-links" id="nav-links">
         <li><a href="event.html">Event Info</a></li>
+        <li><a href="program.html">Program</a></li>
         <li><a href="rsvp.html">RSVP</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
     </ul>
   </div>
 </nav>
 
-  <main class="container">
-      <h2>Event details</h2>
-      <p>Ceremony: 3:00 PM at St. Mary's Church. Reception to follow at The Garden Hall.</p>
-      <p>Dress code: Formal</p>
-      <!-- <div class="map">
-        Replace below src with the embed iframe you get from Google Maps "Share → Embed map"
-        <iframe src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_CODE"
-                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      </div> -->
+<main class="event-page">
+  <h2>Event Details</h2>
+  <p class="intro">We are so excited to celebrate this day with you. Here’s everything you need to know:</p>
+
+  <section class="info-card">
+    <h3>Location</h3>
+    <p>Pirin Golf, Razlog-Bulgaria<br>⏰ 3:00 PM</p>
+  </section>
+
+<div class="video-container">
+  <iframe 
+    src="https://www.youtube.com/embed/Ub9UJ25Xpgs?si=jRM-mBlaT78J0pw3" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+
+  <!-- <section class="info-card">
+    <h3>Transportation</h3>
+    <p>📍 The Garden Hall<br>⏰ Directly after ceremony</p>
+    <iframe src="https://www.youtube.com/watch?v=Ub9UJ25Xpgs" width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"></iframe>
+  </section> -->
+
+  <section class="info-card">
+    <h3>Dress Code</h3>
+    <p>Formal attire</p>
+  </section>
+
+  <section class="info-card">
+    <h3>Schedule</h3>
+    <ul class="timeline">
+      <li><span>3:00 PM</span> Ceremony</li>
+      <li><span>5:00 PM</span> Cocktail Hour</li>
+      <li><span>6:00 PM</span> Dinner</li>
+      <li><span>8:00 PM</span> Dancing 🎶</li>
+    </ul>
+  </section>
+
+  <section class="info-card">
+    <h3>Need Help?</h3>
+    <p>Contact us at <a href="mailto:reservation@piringolf.bg">reservation@piringolf.bg</a></p>
+    <p>Tel: +359 882 810 222; +359 882 810 225</a></p>
+    <p>www.piringolf.bg</a></p>
+  </section>
+</main>
+
+
