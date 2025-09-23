@@ -26,14 +26,41 @@ body {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* optional elegant shadow */
 }
 .event-info {
-  font-family: 'Cinzel Decorative', serif; /* or a clean sans-serif if you prefer */
-  font-size: 3rem;      /* make it bigger */
-  font-weight: 500;       /* medium bold */
-  color: #444;            /* elegant dark gray */
-  margin-top: 1rem;       /* spacing below names */
-  text-align: center;     /* keep it centered */
-  letter-spacing: 1px;    /* spaced-out letters for elegance */
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 3rem;      /* desktop default */
+  font-weight: 500;
+  color: #444;
+  margin-top: 1rem;
+  text-align: center;
+  letter-spacing: 1px;
 }
+/* Countdown styling */
+.countdown {
+  font-size: 2.5rem;    /* desktop default */
+  font-weight: bold;
+  color: #000000;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+/* Tablet */
+@media (max-width: 768px) {
+  .event-info {
+    font-size: 1.5rem;
+  }
+  .countdown {
+    font-size: 2rem;
+  }
+}
+/* Phones */
+@media (max-width: 480px) {
+  .event-info {
+    font-size: 1.2rem;
+  }
+  .countdown {
+    font-size: 1.5rem;
+  }
+}
+
 
 
 /* Navbar */
@@ -135,7 +162,7 @@ main {
 /* For tablets and smaller */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 6rem;
+    font-size: 4rem;
   }
 
   .event-info {
@@ -146,7 +173,7 @@ main {
 /* For very small phones */
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 3.5rem;
+    font-size: 2rem;
   }
 
   .event-info {
