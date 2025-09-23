@@ -62,7 +62,6 @@ body {
 }
 
 
-
 /* Navbar */
 .navbar {
   position: sticky; /* stays at top when scrolling */
@@ -71,6 +70,7 @@ body {
   border-bottom: 1px solid #ddd;
   z-index: 1000;
 }
+
 .nav-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -79,12 +79,14 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 .logo {
   font-weight: 700;
   font-size: 1.2rem;
   color: var(--accent);
   text-decoration: none;
 }
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -92,15 +94,18 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
   transition: color 0.2s;
 }
+
 .nav-links a:hover {
   color: var(--accent);
 }
+
 /* Hamburger icon */
 .hamburger {
   display: none;
@@ -108,11 +113,24 @@ body {
   cursor: pointer;
   gap: 4px;
 }
+
 .hamburger span {
   height: 4px;
   width: 25px;
   background: var(--accent);
   border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* 🔹 Add a little animation when hamburger is active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Responsive */
@@ -130,16 +148,33 @@ body {
     border-left: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
+
   .nav-links li {
     margin: 10px 0;
   }
+
   .hamburger {
     display: flex;
   }
+
   .nav-links.active {
     display: flex;
+    animation: slideDown 0.3s ease-in-out;
   }
 }
+
+/* 🔹 Smooth slide-down animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 main {
   text-align: left;
