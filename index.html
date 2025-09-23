@@ -8,6 +8,17 @@
 
   <link href="css/style.css" rel="stylesheet" />
 </head>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('active');
+});
+</script>
+
 <body>
 
 <nav class="navbar">
