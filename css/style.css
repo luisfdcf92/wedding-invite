@@ -223,59 +223,101 @@ img, iframe {
 
 /* Event page */
 .event-page {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 900px;                  /* consistent with video width */
+  margin: 2rem auto;                 /* center page with spacing */
+  padding: 1.5rem;                   /* internal padding */
+  text-align: justify;               /* body text justified */
+  line-height: 2;                    /* 1.5 spacing like Word */
+  font-size: 2rem;                   /* default text size */
+  font-family: "Josefin Sans", sans-serif;  /* base font for body text */
 }
 
-.event-page h2 {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+/* ----------------------------- */
+/* Heading 1 */
+.event-page h1 {
+  /* font-family: 'Pinyon Script', cursive; */
+  font-family: 'Great Vibes', cursive;
   color: #b85c5c;
+  text-align: center;                /* center heading */
+  font-size: 6rem;
+  margin-top: 0.25rem;
+  margin-bottom: 3rem;
 }
 
-.intro {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+/* ----------------------------- */
+/* Heading 2 */
+.event-page h2 {
+  font-family: 'Great Vibes', cursive;
+  color: #b85c5c;
+  text-align: left;                  /* h2 aligned left */
+  font-size: 3rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.1rem;            /* reduce space after h2 */
 }
 
-.info-card {
-  background: #fff;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.event-page h2 + p {
+  margin-top: 0.25rem;  /* reduce space between h2 and first paragraph */
+}
+
+/* ----------------------------- */
+/* Heading 3 (inside info-cards) */
+.event-page h3 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #000000;
+  font-size: 1.5rem;
   text-align: left;
-}
-
-.info-card h3 {
-  color: #7a3d3d;
+  margin-top: 0rem;
   margin-bottom: 0.5rem;
 }
 
+/* ----------------------------- */
+/* Paragraphs and body text */
+.event-page p,
+.event-page .intro,
+.event-page .info-card p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 1rem;              /* compact spacing */
+}
+
+/* ----------------------------- */
+/* Info cards */
+.info-card {
+  background: #acb28f7b;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;              /* reduce space between cards */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ----------------------------- */
+/* Timeline */
 .timeline {
   list-style: none;
   padding: 0;
 }
+
 .timeline li {
   margin: 0.5rem 0;
 }
+
 .timeline span {
   font-weight: bold;
   color: #b85c5c;
   margin-right: 0.5rem;
 }
 
+/* ----------------------------- */
 /* Video */
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;            /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
-  max-width: 100%;
-  margin: 2rem auto;
+  max-width: 900px;                   /* same as page width */
+  margin: 2rem auto;                  /* centered with spacing */
 }
 
 .video-container iframe {
@@ -284,4 +326,42 @@ img, iframe {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* Program page */
+.program-page {
+  max-width: 900px;                  /* consistent with video width */
+  margin: 2rem auto;                 /* center page with spacing */
+  padding: 1.5rem;                   /* internal padding */
+  text-align: center;               /* body text justified */
+  line-height: 2;                    /* 1.5 spacing like Word */
+  font-size: 2rem;                   /* default text size */
+  font-family: "Josefin Sans", sans-serif;  /* base font for body text */
+}
+
+/* ----------------------------- */
+/* Heading 1 */
+.program-page h1 {
+  /* font-family: 'Pinyon Script', cursive; */
+  font-family: 'Great Vibes', cursive;
+  color: #b85c5c;
+  text-align: center;                /* center heading */
+  font-size: 6rem;
+  margin-top: 0.25rem;
+  margin-bottom: 3rem;
+}
+
+/* ----------------------------- */
+/* Heading 2 */
+.program-page h2 {
+  font-family: 'Great Vibes', cursive;
+  color: #b85c5c;
+  text-align: left;                  /* h2 aligned left */
+  font-size: 3rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.1rem;            /* reduce space after h2 */
+}
+
+.program-page h2 + p {
+  margin-top: 0.25rem;  /* reduce space between h2 and first paragraph */
 }

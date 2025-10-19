@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Countdown code (optional)
-  const weddingDate = new Date(2026, 5, 15, 15, 0, 0);
+  const weddingDate = new Date(2026, 9, 26, 0, 0, 0);
   function updateCountdown() {
     const countdownEl = document.getElementById('countdown');
     if (!countdownEl) return;
