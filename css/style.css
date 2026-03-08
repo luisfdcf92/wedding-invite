@@ -365,3 +365,19 @@ img, iframe {
 .program-page h2 + p {
   margin-top: 0.25rem;  /* reduce space between h2 and first paragraph */
 }
+
+.form-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #243b20; /* Un color elegante para boda */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.form-button:hover {
+  background-color: #243b20;
+  color: #D4AF37; /* Un dorado suave al pasar el ratón */
+}
