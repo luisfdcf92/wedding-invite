@@ -366,18 +366,33 @@ img, iframe {
   margin-top: 0.25rem;  /* reduce space between h2 and first paragraph */
 }
 
+/* --- BOTÓN CORREGIDO --- */
 .form-button {
   display: inline-block;
-  padding: 12px 24px;
-  background-color: #243b20; /* Un color elegante para boda */
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+  padding: 16px 30px !important; /* Un poco más grande para móviles */
+  background-color: #243b20 !important; /* Forzamos tu verde */
+  color: #ffffff !important; /* Forzamos el blanco */
+  text-decoration: none !important;
+  border-radius: 8px;
   font-weight: bold;
-  transition: background-color 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  border: none;
+  margin: 1rem 0;
+  text-align: center;
 }
 
 .form-button:hover {
-  background-color: #243b20;
-  color: #D4AF37; /* Un dorado suave al pasar el ratón */
+  background-color: #31522b !important;
+  color: #D4AF37 !important; /* El dorado que querías */
+  transform: translateY(-2px); /* Efecto sutil de elevación */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Contenedor para asegurar que el botón no se justifique a la izquierda */
+.form-link-container {
+  text-align: center; /* Centra el botón en la página */
+  width: 100%;
+  margin: 2rem 0;
 }
